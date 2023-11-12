@@ -20,15 +20,15 @@ public class PersonService {
     }
 
     public List<Person> getPersonByCityOfLiving(String city) {
-        return personRepository.findAllByCityOfLiving(city);
+        return personRepository.findCityOfLiving(city);
     }
 
     public List<Person> getPersonByAge(int age) {
-        return personRepository.findByPersonPrimaryKey_AgeIsLessThanOrderByPersonPrimaryKey_AgeAsc(age);
+        return personRepository.findByAge(age);
     }
 
     public Optional<Person> getPersonByNameAndSurname(String name, String surname) {
-        return personRepository.findByPersonPrimaryKey_NameAndPersonPrimaryKey_Surname(name, surname);
+        return personRepository.findByNameAndSurname(name, surname);
     }
 
 
